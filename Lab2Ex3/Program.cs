@@ -3,15 +3,15 @@ citit de la tastatura.*/
 
 Console.WriteLine("How many numbers do you want to sum?");
 int n = int.Parse(Console.ReadLine());
+int temp = n;
 
 int sum = 0;
-
-for (int i = 0; i < n; i++)
+while (n > 0)
 {
-    Console.WriteLine("Enter number " + (i + 1) + ": ");
-    int number = int.Parse(Console.ReadLine());
-    sum += number;
+    int digit = n % 10;
+    sum += digit;
+    n /= 10;
 }
 
-Console.WriteLine("The sum of the " + n + " numbers is: " + sum);
+Console.WriteLine($"The sum of the digits of {temp} is: {sum}");
     
